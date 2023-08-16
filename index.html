@@ -17,24 +17,19 @@
                         <textarea placeholder="Write content" id="userInput" maxlength="160"></textarea>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
-        
     </div>
     <script>
         let createBox = document.getElementsByClassName("createBox")[0];
         let notes = document.getElementsByClassName("notes")[0];
         let input = document.getElementById("userInput");
         let i=0;
-
         createBox.addEventListener("keydown",content);
-
         document.getElementById("create").addEventListener("click",
         function(){
             createBox.style.display="block";
         });
-
         function content(e){
             if(e.keyCode =='13')
             {
@@ -43,7 +38,6 @@
                 createBox.style.display="none";
             }
         }
-
         function color(){
             let randomColor = ['#c2ff3d','#ff3de8','#3dc2ff','#04e022','#bc83e6','#ebb328'];
             if(i>randomColor.length -1)
@@ -55,7 +49,6 @@
             let div = document.createElement("div");
             div.className ="note";
             div.innerHTML="<div class=\"details\">"+"<h3>"+text+"<h3>"+"</div>";
-
             //removes
             div.addEventListener("dblclick",function(){
                 div.remove();
